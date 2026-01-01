@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f9f4ef;
+  --foreground: #3b2416;
+  --accent: #d97706;
+  --accent-soft: #fcd9a9;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: radial-gradient(
+    circle at top left,
+    #ffe8c7 0%,
+    #f9f4ef 55%,
+    #f7efe3 100%
+  );
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, "Segoe UI",
+    sans-serif;
+  min-height: 100vh;
+}
+
+.chat-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 999px;
+}
